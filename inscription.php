@@ -88,16 +88,7 @@
 
 
  <script type="text/javascript" src="jquery-2.2.4.js">
-      $(document).ready(function(){
-        
-        $('#enregistrer').click(function(){
-          if( $('#password').text() != $('#confirm_password').text() ){
-            $('#password').css("color","red");
-            $('#password').val('Erreur');  
-          }  
-        });
 
-      });//ready
     </script>
 
 </html>

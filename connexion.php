@@ -15,7 +15,7 @@ try{
 
 
 	//Connexion
-/*
+
 	if(isset($_POST['login']) && isset($_POST['password'])){
 		$login = $_POST['login'];
 		$password = $_POST['password'];
@@ -30,17 +30,18 @@ try{
 				$_SESSION['login'] = $_POST['login'];
 				$_SESSION['password'] = $_POST['password'];
 				//$_SESSION['avatar_user'] = $_POST['avatar_user'];
-				echo "OK";
+				//echo "OK";
 			}else{
-				echo "KO";
+				//echo "KO";
+				$_SESSION['error'] = "Le login ou le mot de passe est incorrect";
 				
 				header('location: index.php'); // On reste sur la page connexion tant que le user n'entre pas les bonnes données
 				include 'error.php';
 			}
-	} */
+	}
 
 	//Inscription
-	
+	/*
 	if(isset($_POST['login']) && isset($_POST['password']) && isset($_POST['avatar'])){
 		$login = $_POST['login'];
 		$password = $_POST['password'];
@@ -66,7 +67,7 @@ try{
 				header('location: inscription.php');
 			}	
 		}
-	}
+	}*/
 
 /*
 if (isset($_GET['connexion'])){  //inscription

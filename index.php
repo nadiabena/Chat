@@ -1,4 +1,14 @@
-<?php session_start(); ?>
+<?php 
+session_start(); 
+
+if (isset($_SESSION['error'])) {
+  $msg = $_SESSION['error'];
+  unset($_SESSION['error']);
+} else {
+  unset($msg);
+}
+
+?>
 
 <!DOCTYPE html>
 <html lang="fr">
@@ -27,12 +37,13 @@
           <span class="input-group-addon" id="basic-addon1"><span class="glyphicon glyphicon-user"></span></span>
           <input name="login" type="text" class="form-control" id="usr" placeholder="Login">
         </div>
-
+      
         <label for="password">Password:</label>
           <div class="input-group">
             <span class="input-group-addon" id="basic-addon1"><span class="glyphicon glyphicon-lock"></span></span>
             <input name="password" type="password" class="form-control" id="pwd" placeholder="Password">
           </div>
+          <div style="color : red"><?= isset($msg) ? $msg : false; ?></div>
 
         <hr/>
 
@@ -47,6 +58,18 @@
 
 </body>
 
+ <script type="text/javascript" src="jquery-2.2.4.js">
+      $(document).ready(function(){
+        
+        $('#enregistrer').click(function(){
+          if( $('#password').text() != $('#confirm_password').text() ){ //Je perds les valeurs car je rafraichit la page lors du header..
+            $('#password').css("color","red");
+            //$('#password').val('Erreur');  
+          }  
+        });
+
+      });//ready
+    </script>
 
 </html>
 
