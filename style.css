@@ -1,0 +1,34 @@
+
+#statut{
+    border-radius: 50px 50px 50px 50px;
+    background: #73AD21;
+    padding: 5px;
+    width: 1px;
+    height: 1px;
+}
+
+#body_discussion{
+	/*background: url('image/paper_background.jpg'); */
+}
+
+#logoTchat {
+	position: absolute;
+	top: 30px;
+	left: 875px;
+}
+
+#logoTchatConnexion{
+	position: absolute;
+	top: 30px;
+	left: 850px;
+}
+
+#id_message_send_at{
+	padding-left: 500px;
+}
+
+#forum {
+    width: 770px;
+    height: 100%;
+    overflow: scroll;
+}
